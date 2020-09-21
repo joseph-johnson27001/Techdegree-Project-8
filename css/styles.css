@@ -5,7 +5,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   margin: auto;
-  max-width: 1500px;
+  max-width: 1200px;
 }
 
 h1 {
@@ -13,10 +13,13 @@ h1 {
   color: darkslategrey;
   margin: 20px;
   font-size: 25px;
+  font-weight: 400;
 }
 
-h1, h2 {
-  font-weight: 400;
+ h2 {
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
 }
 
 p {
