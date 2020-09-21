@@ -1,0 +1,99 @@
+/* ------------------------------------------------------------- */
+/* OVERALL STYLINGS */
+/* ------------------------------------------------------------- */
+body {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  margin: auto;
+  max-width: 1500px;
+}
+
+h1 {
+  text-align: left;
+  color: darkslategrey;
+  margin: 20px;
+  font-size: 25px;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+p {
+  color: slategrey;
+}
+
+/* ------------------------------------------------------------- */
+/* MAIN STYLING */
+/* ------------------------------------------------------------- */
+
+.grid-container {
+  margin: 0% 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------- */
+/* CARD STYLINGS */
+/* ------------------------------------------------------------- */
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  border: 1px solid #DCDCDC;
+  border-radius: 5px;
+  clear: both;
+  padding: 15px;
+  position: relative;
+  height: 130px;
+}
+
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  height: 100px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.text-container {
+
+}
+
+
+/* ------------------------------------------------------------- */
+/* MODAL OVERLAY */
+/* ------------------------------------------------------------- */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 04.)
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
