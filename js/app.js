@@ -9,8 +9,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
-const cards = document.getElementsByClassName("name");
 const input = document.getElementById("searchbox");
+let cards = document.getElementsByClassName("name");
 
 
 /* ------------------------------------------------------------- */
@@ -36,7 +36,6 @@ modalClose.addEventListener('click', () => {
 // Employee Search Event Listener
 
 input.addEventListener('keyup', employeeSearch);
-
 
 /* ------------------------------------------------------------- */
 /* FETCH DATA FROM API */
@@ -102,12 +101,12 @@ ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
 // Employee Search Function
 
  function employeeSearch() {
-  let userInput = input.value.toLowerCase();
-    for (let i = 0; i < cards[i].innerText.length; i++ ) {
-  let employeeName = cards[i].innerText.toLowerCase();
-    if(employeeName.includes(userInput)) {
-      cards[i].parentNode.parentNode.style.display = "block";
-  } else {
-    cards[i].parentNode.parentNode.style.display = "none";
+   let userInput = input.value.toLowerCase();
+    for (let i = 0; i < cards.length; i++ ) {
+      let employeeName = cards[i].innerHTML.toLowerCase();
+      if(employeeName.includes(userInput)) {
+        cards[i].parentNode.parentNode.style.display = "block";
+      } else {
+      cards[i].parentNode.parentNode.style.display = "none";
   }
 }};
