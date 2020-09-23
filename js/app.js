@@ -12,7 +12,7 @@ const modalClose = document.querySelector(".modal-close");
 const modalRight = document.querySelector(".modal-right");
 const modalLeft = document.querySelector(".modal-left");
 const input = document.getElementById("searchbox");
-let cards = document.getElementsByClassName("name");
+let cards = document.getElementsByClassName("card");
 
 /* ------------------------------------------------------------- */
 /* EVENT LISTENERS */
@@ -123,11 +123,11 @@ ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
 function employeeSearch() {
  let userInput = input.value.toLowerCase();
   for (let i = 0; i < cards.length; i++ ) {
-    let employeeName = cards[i].innerHTML.toLowerCase();
+    let employeeName = cards[i].firstElementChild.nextElementSibling.firstElementChild.textContent.toLowerCase();
     if(!employeeName.includes(userInput)) {
-      cards[i].parentNode.parentNode.style.display = "none";
+      cards[i].style.display = "none";
   } else {
-    cards[i].parentNode.parentNode.style.display = "block";
+    cards[i].style.display = "block";
   }
 }};
 
