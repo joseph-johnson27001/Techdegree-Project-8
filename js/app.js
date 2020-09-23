@@ -9,6 +9,8 @@ const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const modalRight = document.querySelector(".modal-right");
+const modalLeft = document.querySelector(".modal-left");
 const input = document.getElementById("searchbox");
 let cards = document.getElementsByClassName("name");
 
@@ -21,11 +23,32 @@ let cards = document.getElementsByClassName("name");
 
 gridContainer.addEventListener('click', e => {
   if (e.target !== gridContainer) {
-    const card = e.target.closest(".card");
-    const index = card.getAttribute('data-index');
-    displayModal(index);
+    card = e.target.closest(".card");
+    indexModal()
   }
 });
+
+
+// Modal Right Click Event
+
+modalRight.addEventListener('click', () => {
+  if (card.dataset.index === "11") {
+    return;
+  }
+  card = card.nextElementSibling;
+  indexModal()
+});
+
+//Modal Left Click Event
+
+modalLeft.addEventListener('click', () => {
+  if (card.dataset.index === "0") {
+    return;
+  }
+  card = card.previousElementSibling;
+  indexModal()
+});
+
 
 // Modal Close Click event listener
 
@@ -110,3 +133,10 @@ function employeeSearch() {
     cards[i].parentNode.parentNode.style.display = "none";
   }
 }};
+
+// Index Modal Function 
+
+function indexModal() {
+  const index = card.getAttribute('data-index');
+  displayModal(index);
+}
