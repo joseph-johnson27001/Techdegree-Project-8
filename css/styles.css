@@ -93,6 +93,18 @@ p {
   cursor: pointer;
 }
 
+.modal-left {
+  position: absolute;
+  left: 25px;
+  bottom: 5px;
+}
+
+.modal-right {
+  position: absolute;
+  right: 25px;
+  bottom: 5px;
+}
+
 .hidden {
   display: none;
 }
