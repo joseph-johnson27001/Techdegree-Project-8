@@ -100,13 +100,13 @@ ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
 
 // Employee Search Function
 
- function employeeSearch() {
-   let userInput = input.value.toLowerCase();
-    for (let i = 0; i < cards.length; i++ ) {
-      let employeeName = cards[i].innerHTML.toLowerCase();
-      if(employeeName.includes(userInput)) {
-        cards[i].parentNode.parentNode.style.display = "block";
-      } else {
-      cards[i].parentNode.parentNode.style.display = "none";
+function employeeSearch() {
+ let userInput = input.value.toLowerCase();
+  for (let i = 0; i < cards.length; i++ ) {
+    let employeeName = cards[i].innerHTML.toLowerCase();
+    if(employeeName.includes(userInput)) {
+      cards[i].parentNode.parentNode.style.display = "block";
+    } else {
+    cards[i].parentNode.parentNode.style.display = "none";
   }
 }};
