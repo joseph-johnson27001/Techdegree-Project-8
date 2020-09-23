@@ -14,7 +14,6 @@ const modalLeft = document.querySelector(".modal-left");
 const input = document.getElementById("searchbox");
 let cards = document.getElementsByClassName("name");
 
-
 /* ------------------------------------------------------------- */
 /* EVENT LISTENERS */
 /* ------------------------------------------------------------- */
@@ -28,8 +27,7 @@ gridContainer.addEventListener('click', e => {
   }
 });
 
-
-// Modal Right Click Event
+// Modal Right Button Click Event
 
 modalRight.addEventListener('click', () => {
   if (card.dataset.index === "11") {
@@ -39,7 +37,7 @@ modalRight.addEventListener('click', () => {
   indexModal()
 });
 
-//Modal Left Click Event
+// Modal Left Button Click Event
 
 modalLeft.addEventListener('click', () => {
   if (card.dataset.index === "0") {
@@ -48,7 +46,6 @@ modalLeft.addEventListener('click', () => {
   card = card.previousElementSibling;
   indexModal()
 });
-
 
 // Modal Close Click event listener
 
@@ -127,14 +124,14 @@ function employeeSearch() {
  let userInput = input.value.toLowerCase();
   for (let i = 0; i < cards.length; i++ ) {
     let employeeName = cards[i].innerHTML.toLowerCase();
-    if(employeeName.includes(userInput)) {
-      cards[i].parentNode.parentNode.style.display = "block";
-    } else {
-    cards[i].parentNode.parentNode.style.display = "none";
+    if(!employeeName.includes(userInput)) {
+      cards[i].parentNode.parentNode.style.display = "none";
+  } else {
+    cards[i].parentNode.parentNode.style.display = "block";
   }
 }};
 
-// Index Modal Function 
+// Index Modal Function
 
 function indexModal() {
   const index = card.getAttribute('data-index');
